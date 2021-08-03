@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;600&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@import "colors";
+@box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+*{
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+  
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    box-shadow: @box-shadow;
+
+    .logo{
+        font-size: 2.5rem;
+         color: @orange;
+        i{
+            color: @lightGreen;
+        }
+    }
+    .navbar a{
+         font-size: 1.5rem;
+         padding: .5rem 1.5rem;
+         color: @black;
+         border-radius: 5px;
+         
+         &:hover{
+            color: @white;
+            background-color: @green;
+         }
+    }
+    .icons i, .icons a{
+       margin-left: .7rem;
+        font-size: 1.5rem; 
+        height: 4rem;
+        width: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        cursor: pointer;
+        color: black;
+        background-color: @grey;
+        border-radius: 50%;
+
+        &:hover{
+            background-color: @green;
+            transform: rotate(360deg);
+        }
+        
+    }
+    #menu-bars{
+            display: none;
+        }
+}
+
+// .times{
+//   font-family: "Font Awesome 5 Free";
+//    content: '.fa times';
+//    color: white;
+// }
+//Form section
+
+
+//-------------Search Box section---------------
+#search-form{
+    position: absolute;
+    top:-110%; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1005;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 1rem;
+
+    #search-box{
+        width: 28rem;
+        padding: 1rem 0;
+        border-bottom:1px solid #eee;
+        background-color: transparent;
+        font-size: 2rem;
+        text-transform: none;
+    }
+    label{
+        color: @white;
+        font-size: 2rem;
+        cursor: pointer;  
+        &:hover{
+            color: @green;
+        }      
+    }
+    #close{
+        position: absolute;
+        top: 2rem;right:3rem;
+        cursor: pointer;
+        font-size: 4rem;
+        color: @white;
+    }
+}
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+#search-form.active{
+    top: 0%;
+}
+
+//-------------Home section---------------
+section{
+    padding: 2rem 9%;
+}
+section:nth-child(even){
+    background-color: #eee;
+}
+
+.home{
+    .home-slider{
+        .slide{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 9rem;
+        
+            .content{
+                flex: 1 1 45rem;
+                span{
+                    font-size: 2.5rem;
+                    color: @green;
+                }
+                h3{
+                    font-size: 5rem;
+                    color: @purple;
+                }
+                p{
+                    font-size: 2rem;
+                    color: @lightBlack;
+                }
+                a{
+                    display:inline-block;
+                    margin-top: 1rem;
+                    padding: 5px 10px;
+                    background-color: @purple;
+                    color: @white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 1.5rem;
+                    &:hover{
+                        background-color: @green;
+                    }
+                }
+            }
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+       
+    }
+    .swiper-pagination-bullet-active{
+    background: @green;
+}
+}
+
+
+@media screen and (max-width:1101px){
+    html{
+        font-size: 70%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+@media screen and (max-width:728px) {
+    header{
+        .icons #menu-bars{
+            display: inline-block;
+        }
+        .navbar{
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: @white;
+            border-top: .1rem solid rgba(0,0,0,.2);
+            border-bottom: .1rem solid rgba(0,0,0,.2);
+            padding: 1rem;
+            clip-path:polygon(0 0, 100% 0, 100% 0,0 0);
+            
+            
+            a{
+                display: block;
+                padding: 1.5rem;
+                margin: 1rem;
+                font-size: 2rem;
+                background: @grey;
+            }
+        }
+    }
+    header .navbar.active{
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    }
+}
+#search-box{
+    width: 90%;
+    margin: 0 1rem;
+}
+@media screen and (max-width:1101px){
+    html{
+        font-size: 70%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
