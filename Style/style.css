@@ -33,6 +33,19 @@
 html {
   scroll-behavior: smooth;
 }
+.myBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 5px 10px;
+  background-color: #0b0618;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.myBtn:hover {
+  background-color: #14A76C;
+}
 header {
   position: fixed;
   top: 0;
@@ -43,6 +56,8 @@ header {
   justify-content: space-between;
   padding: 1rem 7%;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 1000;
 }
 header .logo {
   font-size: 2.5rem;
@@ -171,6 +186,142 @@ section:nth-child(even) {
 }
 .home .swiper-pagination-bullet-active {
   background: #14A76C;
+}
+.menu-dishes .sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #14A76C;
+  padding-top: 1rem;
+}
+.menu-dishes .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #0b0618;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.menu-dishes .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+}
+.menu-dishes .box-container .box {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 2.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+.menu-dishes .box-container .box img {
+  height: auto;
+  width: 100%;
+}
+.menu-dishes .box-container .box h3 {
+  font-size: 2rem;
+}
+.menu-dishes .box-container .box .stars {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.menu-dishes .box-container .box .stars i {
+  color: #111;
+}
+.menu-dishes .box-container .box .stars i:hover {
+  color: #14A76C;
+}
+.menu-dishes .box-container .box:hover .fa-heart {
+  left: 2rem;
+}
+.menu-dishes .box-container .box:hover .fa-eye {
+  right: 2rem;
+}
+.menu-dishes .box-container .box .fa-heart,
+.menu-dishes .box-container .box .fa-eye {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  background-color: #cec4c4;
+  border-radius: 50%;
+  color: #111;
+}
+.menu-dishes .box-container .box .fa-heart:hover,
+.menu-dishes .box-container .box .fa-eye:hover {
+  color: #14A76C;
+}
+.menu-dishes .box-container .box .fa-heart {
+  left: -2.9rem;
+}
+.menu-dishes .box-container .box .fa-eye {
+  right: -4rem;
+}
+.menu-dishes .box-container .box span {
+  font-weight: bold;
+  display: block;
+}
+.about .sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #14A76C;
+  padding-top: 1rem;
+}
+.about .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #0b0618;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.about .row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .row .image {
+  flex: 1 1 45rem;
+}
+.about .row .image img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 45rem;
+}
+.about .row .content h3 {
+  color: #0b0618;
+  font-size: 3rem;
+  padding: 0.5rem 0;
+}
+.about .row .content p {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.about .row .content .icon-container {
+  display: flex;
+  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.about .row .content .icon-container .icons {
+  background-color: #cec4c4;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 17rem;
+  padding: 10px;
+}
+.about .row .content .icon-container .icons i {
+  font-size: 2.5rem;
+  color: #14A76C;
+}
+.about .row .content .icon-container .icons span {
+  font-size: 1.5rem;
 }
 @media screen and (max-width: 1101px) {
   html {

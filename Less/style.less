@@ -16,6 +16,19 @@
 html{
     scroll-behavior: smooth;
 }
+.myBtn{
+                    display:inline-block;
+                    margin-top: 1rem;
+                    padding: 5px 10px;
+                    background-color: @purple;
+                    color: @white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 1.5rem;
+                    &:hover{
+                        background-color: @green;
+                    }
+                }
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -24,7 +37,8 @@ header{
     justify-content: space-between;
     padding: 1rem 7%;
     box-shadow: @box-shadow;
-
+    background-color: @white;
+    z-index: 1000;
     .logo{
         font-size: 2.5rem;
          color: @orange;
@@ -149,17 +163,7 @@ section:nth-child(even){
                     color: @lightBlack;
                 }
                 a{
-                    display:inline-block;
-                    margin-top: 1rem;
-                    padding: 5px 10px;
-                    background-color: @purple;
-                    color: @white;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    font-size: 1.5rem;
-                    &:hover{
-                        background-color: @green;
-                    }
+                    .myBtn;
                 }
             }
             .image{
@@ -175,7 +179,149 @@ section:nth-child(even){
 }
 }
 
+//-------------Menu Dishes section---------------
+.menu-dishes{
+    .sub-heading{
+        text-align: center;
+        font-size: 2rem;
+        color: @green;
+        padding-top: 1rem;
+    }
+    .heading{
+        text-align: center;
+        font-size: 2rem;
+        color: @purple;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .box-container{
+        display: grid;
+        grid-template-columns:  repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 1.5rem;
 
+        .box{
+            background-color: @white;
+            box-shadow: @box-shadow;
+            border-radius: .5rem;
+            border: .2rem solid rgba(0,0,0,.2);
+            position: relative;
+            padding: 2.5rem;
+            overflow: hidden;
+            text-align: center;
+            img{
+                height:auto;
+                width: 100%;
+            }
+            h3{
+                font-size: 2rem;
+            }
+            .stars{
+                font-size: 1rem;
+                padding: 1rem;
+                i{
+                    color: @black;
+                    &:hover{
+                        color: @green;
+                    }
+                }
+            }
+            &:hover{
+                .fa-heart{
+                    left: 2rem;
+                }
+                .fa-eye{
+                    right: 2rem;
+                }
+            }
+            .fa-heart, .fa-eye {
+                position: absolute;
+                font-size: 1.5rem;
+                padding: .7rem;
+                background-color: @grey;
+                border-radius: 50%;
+                color:@black;
+                &:hover{
+                    color:@green;
+                }
+            }
+            .fa-heart{
+                left: -2.9rem;
+            }
+            .fa-eye{
+                right: -4rem;
+            }
+            span{
+                font-weight: bold;
+                display: block;
+            }
+        }
+    }
+}
+//-------------About us section---------------
+.about{
+    .sub-heading{
+        text-align: center;
+        font-size: 2rem;
+        color: @green;
+        padding-top: 1rem;
+    }
+    .heading{
+        text-align: center;
+         font-size: 2rem;
+        color: @purple;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .row{
+        display: flex;
+        gap: 1.2rem;
+        align-items: center;
+        flex-wrap: wrap;
+        .image{
+            flex: 1 1 45rem;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            flex: 1 1 45rem;
+            h3{
+                color: @purple;
+                font-size: 3rem;
+                padding: .5rem 0;
+            }
+            p{
+                font-size: 1.5rem;
+                padding: .5rem 0;
+            }
+            .icon-container{
+                display: flex;
+                padding: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: .5rem;
+                .icons{
+                    background-color: @grey;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1 1 17rem;
+                    padding: 10px;
+                    i{
+                        font-size: 2.5rem;
+                        color: @green;
+                    }
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:1101px){
     html{
         font-size: 70%;
